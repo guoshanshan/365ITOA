@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.yfann.web.model.ProductGreateImg" table="t_product_greate_img" schema="" catalog="yp0004">
+        <id name="id" column="id"/>
+        <property name="productId" column="product_id"/>
+        <property name="greatImg" column="great_img"/>
+    </class>
+</hibernate-mapping>

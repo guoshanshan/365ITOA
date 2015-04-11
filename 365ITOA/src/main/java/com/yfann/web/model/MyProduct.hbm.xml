@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.yfann.web.model.MyProduct" table="t_my_product" schema="" catalog="yp0004">
+        <id name="id" column="id"/>
+        <property name="userId" column="user_id"/>
+        <property name="productId" column="product_id"/>
+        <property name="smartCode" column="smart_code"/>
+        <property name="playerCode" column="player_code"/>
+        <property name="authorizeStatus" column="authorize_status"/>
+        <property name="aceptDate" column="acept_date"/>
+        <property name="authorizeDate" column="authorize_date"/>
+        <property name="authorizeUser" column="authorize_user"/>
+    </class>
+</hibernate-mapping>

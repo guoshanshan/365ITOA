@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.yfann.web.model.Product" table="t_product" schema="" catalog="yp0004">
+        <id name="id" column="id"/>
+        <property name="productId" column="product_id"/>
+        <property name="productPrice" column="product_price"/>
+        <property name="onlineTime" column="online_time"/>
+        <property name="offlineTime" column="offline_time"/>
+        <property name="cloudeUrl" column="cloude_url"/>
+        <property name="cloudeCode" column="cloude_code"/>
+        <property name="productDesc" column="product_desc"/>
+        <property name="updateDate" column="update_date"/>
+        <property name="status" column="status"/>
+        <property name="productName" column="product_name"/>
+        <property name="productIntroduction" column="product_introduction"/>
+
+<!--        <set name="producDetailImgSet" inverse="true" cascade="save-update">
+            <key><column name="product_id"></column></key>
+            <one-to-many class="com.yfann.web.model.ProducDetailImg"></one-to-many>
+        </set>
+
+        <set name="productGreateImgSet" inverse="true" cascade="save-update">
+            <key><column name="product_id"></column></key>
+            <one-to-many class="com.yfann.web.model.ProducDetailImg"></one-to-many>
+        </set>-->
+    </class>
+</hibernate-mapping>

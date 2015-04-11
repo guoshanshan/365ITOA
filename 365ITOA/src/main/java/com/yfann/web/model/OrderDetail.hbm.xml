@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.yfann.web.model.OrderDetail" table="t_order_detail" schema="" catalog="yp0004">
+        <id name="id" column="id"/>
+        <property name="orderId" column="order_id"/>
+        <property name="productId" column="product_id"/>
+        <property name="price" column="price"/>
+        <property name="productCount" column="product_count"/>
+    </class>
+</hibernate-mapping>
