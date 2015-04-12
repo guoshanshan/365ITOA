@@ -64,7 +64,7 @@ public class ProductDaoImple extends BaseDaoImple<Product> implements ProductDao
      */
     @Override
     public byte[] takeProductDatailImg(String id) {
-        String hql = "select productDetailImg from " + ProducDetailImg.class.getName() + " where id = ?";
+        String hql = "select productDetailImg from " + ProductDetailImg.class.getName() + " where id = ?";
         return (byte[])hibernateTemplate.find(hql,new Object[]{id}).get(0);
     }
 
@@ -89,7 +89,7 @@ public class ProductDaoImple extends BaseDaoImple<Product> implements ProductDao
     @Override
     public List<String> findProductDetailImgIdByProductId(String productId) {
         if (StringUtils.isNotBlank(productId)) {
-            String hql = "select id from " + ProducDetailImg.class.getSimpleName() + " where productId = ?";
+            String hql = "select id from " + ProductDetailImg.class.getSimpleName() + " where productId = ?";
             return hibernateTemplate.find(hql, new Object[]{productId});
         }
         return null;

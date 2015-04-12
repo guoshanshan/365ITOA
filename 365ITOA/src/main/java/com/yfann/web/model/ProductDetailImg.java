@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * Created by Simon on 2015/4/2.
  */
-public class ProducDetailImg {
+public class ProductDetailImg {
     private String id;
     private String productId;
     private byte[] productDetailImg;
@@ -39,7 +39,7 @@ public class ProducDetailImg {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        ProducDetailImg that = (ProducDetailImg) o;
+        ProductDetailImg that = (ProductDetailImg) o;
 
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (!Arrays.equals(productDetailImg, that.productDetailImg)) return false;

@@ -83,7 +83,7 @@ public class ProductAction {
             }
             //课程详情图
             case 2 : {
-                ProducDetailImg producDetailImg = new ProducDetailImg();
+                ProductDetailImg producDetailImg = new ProductDetailImg();
                 producDetailImg.setId(UUIDCreate.takeUUID());
                 producDetailImg.setProductId(productId);
                 producDetailImg.setProductDetailImg(file.getBytes());
