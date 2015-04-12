@@ -1,6 +1,7 @@
 package com.yfann.web.service.imple;
 
 import com.yfann.web.dao.ProductDao;
+import com.yfann.web.model.Dic;
 import com.yfann.web.model.Product;
 import com.yfann.web.model.ProductKind;
 import com.yfann.web.model.ProductLevel;
@@ -18,6 +19,79 @@ import java.util.List;
 public class ProductServiceImple implements ProductService {
     @Autowired
     private ProductDao productDao;
+
+    /**
+     * 获取课程图片
+     *
+     * @param id
+     * @return
+     */
+    @Override
+    public byte[] takeProductImg(String id) {
+        return productDao.takeProductImg(id);
+    }
+
+    /**
+     * 获取该课程的所有课程图片ID
+     *
+     * @param productId
+     * @return
+     */
+    @Override
+    public List<String> findProductImgIdByProductId(String productId) {
+        return productDao.findProductImgIdByProductId(productId);
+    }
+
+    /**
+     * 上传图片
+     *
+     * @param object
+     */
+    @Override
+    public void uploadProductImg(Object object) {
+        productDao.saveModel(object);
+    }
+
+    /**
+     * 删除课程
+     *
+     * @param id
+     */
+    @Override
+    public void deletePeoduct(String id) {
+        productDao.deleteModel(id);
+    }
+
+    /**
+     * 保存课程
+     *
+     * @param product
+     */
+    @Override
+    public void saveProduct(Product product) {
+        productDao.saveModel(product);
+    }
+
+    /**
+     * 更新课程信息
+     *
+     * @param product
+     */
+    @Override
+    public void editProduct(Product product) {
+        productDao.updateModel(product);
+    }
+
+    /**
+     * 根据字典类型获取字典
+     *
+     * @param dicType
+     * @return
+     */
+    @Override
+    public List<Dic> findDicListByDicType(String dicType) {
+        return productDao.findDicListByDicType(dicType);
+    }
 
     /**
      * 根据id获取产品详情图片

@@ -38,7 +38,7 @@ public class BaseDaoImple<T> implements BaseDao<T>{
      */
     @Override
     public void deleteModel(Serializable modelId) {
-
+        hibernateTemplate.delete(this.findModelById(modelId));
     }
 
     /**

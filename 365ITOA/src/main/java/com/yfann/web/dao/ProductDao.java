@@ -1,10 +1,7 @@
 package com.yfann.web.dao;
 
 import com.yfann.web.dao.common.BaseDao;
-import com.yfann.web.model.Product;
-import com.yfann.web.model.ProductImage;
-import com.yfann.web.model.ProductKind;
-import com.yfann.web.model.ProductLevel;
+import com.yfann.web.model.*;
 
 import java.util.List;
 
@@ -12,6 +9,28 @@ import java.util.List;
  * Created by Simon on 2015/4/2.
  */
 public interface ProductDao<T> extends BaseDao<T> {
+
+    /**
+     * 获取课程图片
+     * @param id
+     * @return
+     */
+    public byte[] takeProductImg(String id);
+
+    /**
+     * 获取该课程的所有课程图片ID
+     * @param productId
+     * @return
+     */
+    public List<String> findProductImgIdByProductId(String productId);
+
+    /**
+     * 根据字典类型获取字典
+     *
+     * @param dicType
+     * @return
+     */
+    public List<Dic> findDicListByDicType(String dicType);
 
     /**
      * 根据Id获取产品详情图片

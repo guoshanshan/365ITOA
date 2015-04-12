@@ -15,6 +15,48 @@ import java.util.List;
 public class ProductDaoImple extends BaseDaoImple<Product> implements ProductDao<Product> {
 
     /**
+     * 获取课程图片
+     *
+     * @param id
+     * @return
+     */
+    @Override
+    public byte[] takeProductImg(String id) {
+        String hql = "select productImage from " + ProductImage.class.getName() + " where id = ?";
+        return (byte[])hibernateTemplate.find(hql,new Object[]{id}).get(0);
+    }
+
+    /**
+     * 获取该课程的所有课程图片ID
+     *
+     * @param productId
+     * @return
+     */
+    @Override
+    public List<String> findProductImgIdByProductId(String productId) {
+        if (StringUtils.isNotBlank(productId)) {
+            String hql = "select id from " + ProductImage.class.getName() + " where productId = ?";
+            return hibernateTemplate.find(hql, new Object[]{productId});
+        }
+        return null;
+    }
+
+    /**
+     * 根据字典类型获取字典
+     *
+     * @param dicType
+     * @return
+     */
+    @Override
+    public List<Dic> findDicListByDicType(String dicType) {
+        if (StringUtils.isNotBlank(dicType)) {
+            String hql = "from " + Dic.class.getName() + " where dicType = ?";
+            return hibernateTemplate.find(hql, new Object[]{dicType});
+        }
+        return null;
+    }
+
+    /**
      * 根据Id获取产品详情图片
      *
      * @param id
