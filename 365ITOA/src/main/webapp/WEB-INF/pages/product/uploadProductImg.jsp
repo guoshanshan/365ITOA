@@ -93,7 +93,7 @@
                             <div class="box-body">
                                 <div class="form-group">
                                     <label for="exampleInputFile">课程详情图</label>
-                                    <input id="exampleInputFile" type="file">
+                                    <input id="exampleInputFile" type="file" name="imgFile">
                                 </div>
                             </div>
                             <!-- /.box-body -->
@@ -120,7 +120,7 @@
                             <div class="box-body">
                                 <div class="form-group">
                                     <label for="exampleInputFile">课程精彩截图</label>
-                                    <input id="exampleInputFile" type="file">
+                                    <input id="exampleInputFile" type="file" name="imgFile">
                                 </div>
                             </div>
                             <!-- /.box-body -->

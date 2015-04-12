@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="com.yfann.web.model.ProducDetailImg" table="t_produc_detail_img" schema="" catalog="yp0004">
+    <class name="com.yfann.web.model.ProductDetailImg" table="t_product_detail_img" schema="" catalog="yp0004">
         <id name="id" column="id"/>
         <property name="productId" column="product_id"/>
         <property name="productDetailImg" column="product_detail_img"/>
