@@ -5,7 +5,7 @@
 <hibernate-configuration>
     <!-- sessionFactory代表一个数据库的描述 -->
     <session-factory>
-        <property name="connection.password">root</property>
+        <property name="connection.password">yfann2014</property>
         <property name="connection.username">root</property>
 
         <property name="hibernate.connection.driver_class">
