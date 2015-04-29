@@ -7,8 +7,8 @@
     <class name="com.yfann.web.model.OrderDetail" table="t_order_detail" schema="" catalog="yp0004">
         <id name="id" column="id"/>
         <property name="orderId" column="order_id"/>
-        <property name="productId" column="product_id"/>
         <property name="price" column="price"/>
         <property name="productCount" column="product_count"/>
+        <many-to-one name="product" class="com.yfann.web.model.Product" column="product_id" fetch="join" foreign-key="null"></many-to-one>
     </class>
 </hibernate-mapping>

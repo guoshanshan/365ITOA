@@ -17,6 +17,9 @@
         <property name="status" column="status"/>
         <property name="productName" column="product_name"/>
         <property name="productIntroduction" column="product_introduction"/>
+        <one-to-one name="productStatusDic" foreign-key="null" fetch="join" property-ref="dicComponent">
+            <formula>'PRODUCT_STATUS'</formula><formula>status</formula>
+        </one-to-one>
 
 <!--        <set name="producDetailImgSet" inverse="true" cascade="save-update">
             <key><column name="product_id"></column></key>

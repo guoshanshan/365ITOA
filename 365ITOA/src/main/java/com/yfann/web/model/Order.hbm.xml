@@ -14,9 +14,13 @@
         <property name="payTime" column="pay_time" type="java.util.Date"/>
         <property name="orderPrice" column="order_price" type="java.math.BigDecimal"/>
         
-        <set name="orderDetailSet" inverse="true" cascade="save-update">
-            <key><column name="order_id" ></column></key>
+        <set name="orderDetailSet" inverse="true" cascade="save-update" fetch="join">
+            <key foreign-key="null"><column name="order_id"></column></key>
             <one-to-many class="com.yfann.web.model.OrderDetail"></one-to-many>
         </set>
+
+        <one-to-one name="orderStatusDic" property-ref="dicComponent" fetch="join" foreign-key="null">
+            <formula>'ORDER_STATUS'</formula><formula>order_status</formula>
+        </one-to-one>
     </class>
 </hibernate-mapping>

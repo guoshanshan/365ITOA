@@ -1,13 +1,22 @@
 package com.yfann.web.model;
 
 /**
- * Created by Simon on 2015/4/6.
+ * Created by Simon on 2015/4/15.
  */
 public class Dic {
     private String id;
     private String dicType;
     private String dicCn;
     private String dicCode;
+    private DicComponent dicComponent;
+
+    public DicComponent getDicComponent() {
+        return dicComponent;
+    }
+
+    public void setDicComponent(DicComponent dicComponent) {
+        this.dicComponent = dicComponent;
+    }
 
     public String getId() {
         return id;

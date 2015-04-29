@@ -50,7 +50,7 @@ public class ProductDaoImple extends BaseDaoImple<Product> implements ProductDao
     @Override
     public List<Dic> findDicListByDicType(String dicType) {
         if (StringUtils.isNotBlank(dicType)) {
-            String hql = "from " + Dic.class.getName() + " where dicType = ?";
+            String hql = "from " + Dic.class.getName() + " dic where dic.dicComponent.dicType = ?";
             return hibernateTemplate.find(hql, new Object[]{dicType});
         }
         return null;

@@ -3,7 +3,7 @@ package com.yfann.web.model;
 import java.util.Arrays;
 
 /**
- * Created by Simon on 2015/4/2.
+ * Created by Simon on 2015/4/12.
  */
 public class ProductDetailImg {
     private String id;

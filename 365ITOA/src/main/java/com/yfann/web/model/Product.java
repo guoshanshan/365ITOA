@@ -21,9 +21,18 @@ public class Product {
     private String status;
     private String productName;
     private String productIntroduction;
+    private Dic productStatusDic;
+
+    public Dic getProductStatusDic() {
+        return productStatusDic;
+    }
+
+    public void setProductStatusDic(Dic productStatusDic) {
+        this.productStatusDic = productStatusDic;
+    }
 
     /*课程详情图片**/
-/*    private Set<ProducDetailImg> producDetailImgSet;
+/*    private Set<ProductDetailImg> productDetailImgSet;
     *//*课程精彩**//*
     private Set<ProductGreateImg> productGreateImgSet;
 

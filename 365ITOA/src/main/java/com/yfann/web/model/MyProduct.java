@@ -1,6 +1,7 @@
 package com.yfann.web.model;
 
-import java.sql.Date;
+import java.util.Date;
+import java.util.List;
 
 /**
  * Created by Simon on 2015/4/2.
@@ -15,6 +16,24 @@ public class MyProduct {
     private Date aceptDate;
     private Date authorizeDate;
     private String authorizeUser;
+    private Product product;
+    private Dic authorizeStatusDic;
+
+    public Dic getAuthorizeStatusDic() {
+        return authorizeStatusDic;
+    }
+
+    public void setAuthorizeStatusDic(Dic authorizeStatusDic) {
+        this.authorizeStatusDic = authorizeStatusDic;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
 
     public String getId() {
         return id;

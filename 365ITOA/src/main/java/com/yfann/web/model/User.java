@@ -1,12 +1,13 @@
 package com.yfann.web.model;
 
-import java.sql.Date;
+import java.io.Serializable;
+import java.util.Date;
 import java.util.Arrays;
 
 /**
  * Created by Simon on 2015/4/2.
  */
-public class User {
+public class User implements Serializable{
     private String id;
     private String userId;
     private String userName;

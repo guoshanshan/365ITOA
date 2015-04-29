@@ -11,6 +11,15 @@ public class OrderDetail {
     private String productId;
     private BigDecimal price;
     private Integer productCount;
+    private Product product;
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
 
     public String getId() {
         return id;

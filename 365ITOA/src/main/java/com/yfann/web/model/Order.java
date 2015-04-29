@@ -2,7 +2,6 @@ package com.yfann.web.model;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.sql.Timestamp;
 import java.util.Date;
 import java.util.Set;
 
@@ -18,8 +17,7 @@ public class Order implements Serializable{
     private String payWay;
     private Date payTime;
     private BigDecimal orderPrice;
-
-
+    private Dic orderStatusDic;
     private Set<OrderDetail> orderDetailSet;
 
     public Set<OrderDetail> getOrderDetailSet() {
@@ -28,14 +26,6 @@ public class Order implements Serializable{
 
     public void setOrderDetailSet(Set<OrderDetail> orderDetailSet) {
         this.orderDetailSet = orderDetailSet;
-    }
-
-    public void setOrderCreateTime(java.sql.Date orderCreateTime) {
-        this.orderCreateTime = orderCreateTime;
-    }
-
-    public void setPayTime(Timestamp payTime) {
-        this.payTime = payTime;
     }
 
     public String getId() {
@@ -94,6 +84,22 @@ public class Order implements Serializable{
         this.payTime = payTime;
     }
 
+    public BigDecimal getOrderPrice() {
+        return orderPrice;
+    }
+
+    public void setOrderPrice(BigDecimal orderPrice) {
+        this.orderPrice = orderPrice;
+    }
+
+    public Dic getOrderStatusDic() {
+        return orderStatusDic;
+    }
+
+    public void setOrderStatusDic(Dic orderStatusDic) {
+        this.orderStatusDic = orderStatusDic;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -123,13 +129,5 @@ public class Order implements Serializable{
         result = 31 * result + (payWay != null ? payWay.hashCode() : 0);
         result = 31 * result + (payTime != null ? payTime.hashCode() : 0);
         return result;
-    }
-
-    public BigDecimal getOrderPrice() {
-        return orderPrice;
-    }
-
-    public void setOrderPrice(BigDecimal orderPrice) {
-        this.orderPrice = orderPrice;
     }
 }

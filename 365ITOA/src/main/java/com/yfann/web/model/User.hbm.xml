@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="com.yfann.web.model.User" table="t_sys_user">
+    <class name="com.yfann.web.model.User" table="t_sys_user" dynamic-insert="true" dynamic-update="true">
         <id name="id" column="ID" type="java.lang.String" length="42"/>
         <property name="userId" column="USER_ID" type="java.lang.String" length="32"/>
         <property name="userName" column="USER_NAME" type="java.lang.String" length="60"/>
