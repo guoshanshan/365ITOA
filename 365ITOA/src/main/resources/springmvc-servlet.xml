@@ -12,15 +12,10 @@
 		<mvc:annotation-driven/> -->
 		
 		<context:component-scan base-package="com.yfann.web.action"/>
-
-    <!-- 注意id=multipartResolver必须要配 -->
-    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-        <!-- maxUploadSize:文件最大限制，单位是字节 -->
-        <property name="maxUploadSize" value="10485760"></property>
-    </bean>
+		
 	
 		
-		<!--视图解析器 /WEB-INF/jsp/index.jsp -->
+		<!--视图解析器 /WEB-INF/jsp/myCenterIndex.jsp -->
 		<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 			<property name="prefix" value="/WEB-INF/pages/"></property>
 			<property name="suffix" value=".jsp"></property>

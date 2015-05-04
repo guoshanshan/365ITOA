@@ -37,6 +37,29 @@
 			<ref bean="sessionFactory"/>
 		</property>
 	</bean>
+
+    <!-- 配置事务的传播特性 -->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <!--注册功能-->
+            <tx:method name="regist*" propagation="REQUIRED"/>
+            <tx:method name="add*" propagation="REQUIRED"/>
+            <tx:method name="save*" propagation="REQUIRED"/>
+            <tx:method name="del*" propagation="REQUIRED"/>
+            <tx:method name="modify*" propagation="REQUIRED"/>
+            <tx:method name="update*" propagation="REQUIRED"/>
+            <tx:method name="batch*" propagation="REQUIRED"/>
+            <tx:method name="find*" propagation="REQUIRED" read-only="true"/>
+        </tx:attributes>
+    </tx:advice>
+
+
+    <aop:config>
+        <aop:pointcut id="allServiceMethods"
+                      expression="execution(* com.yfann.web.service.*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice"
+                     pointcut-ref="allServiceMethods"/>
+    </aop:config>
 	
 	<!-- 
 		启动类扫描的注解解析器

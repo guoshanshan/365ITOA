@@ -36,6 +36,9 @@
         <!--hibernate自动提交事务   此处应交由spring管理 生产环境该配置注视-->
         <property name="hibernate.connection.autocommit">true</property>
 
+        <property name="connection.useUnicode">true</property>
+        <property name="connection.characterEncoding">UTF-8</property>
+
 
     </session-factory>
 </hibernate-configuration>
